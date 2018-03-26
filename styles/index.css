@@ -1,0 +1,36 @@
+p {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+a {
+    width: 140px;
+    text-align: center;
+  }
+
+
+.card-body {
+  text-align: center;
+  margin: auto;
+}
+
+
+#speed, #accuracy, #time {
+  margin: 10px auto;
+}
+
+.col {
+  text-align: center;
+  margin: 20px auto;
+
+  max-width: 280px;
+  
+  height: 280px;
+}
+
+.row {
+  margin: 0px 230px;
+}
+    
+  

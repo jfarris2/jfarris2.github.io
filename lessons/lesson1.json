@@ -1,0 +1,15 @@
+{
+  "0": ["jjjjjjjjjjjj", "Type the letter J with your right index finger."],
+  "1": ["jjj jjj jjj ||jjj jjj jjj", "Now we are adding in the Space Bar. Use whichever thumb feels most comfortable for you."],
+  "2": ["fff fff fff fff fff fff fff fff ||fff fff fff fff fff fff fff fff", "Now with your left hand, type the F key with your index finger."], 
+  "3": ["jjj jjj jjj jjj fff fff fff fff ||jjj jjj fff fff jjj jjj fff fff", "You may have noticed that your keyboard has small bumps on the J and F keys. Using these bumps, you can always maintain proper hand placement without needing to look down at the keyboard!"], 
+  "4": ["jjj fff jjf ffj jfj fjf ffjj jjff ||fff jjj ffj jjf fjf jfj jjff ffjj", "Just do it!"], 
+  "5": ["jjf jjf jjf jjf jjf jjf jjf jjf ||ffj ffj ffj ffj ffj ffj ffj ffj ||jjj jjj jjj jjj fff fff fff fff","Just keep typing, typing, typing"], 
+  "6": ["jfj jfj jfj jfj jfj jfj jfj jfj ||fjf fjf fjf fjf fjf fjf fjf fjf ||jfj fjf jfj fjf jfj fjf jfj fjf", ""],
+  "7": ["jjff fffjj fjjfjfj fjfjfjjf jjjff ||ffjjf fff ffjjj jfjjjf ffjfjjf jfjf ||f j jjj fj fff ffj jjff fffj j jff", ""],
+  "8": ["j f jj ff jjj fff jjjj ffff jjjjj fffff ||jf fj jjf ffj jfj fjf fffj jjjf fjfjjfj", ""], 
+  "9": ["jjfjff ffjfjj jffjf jfjf ffjffj ffjjjff ||jffjf ffjfjjjjf fjjfjfjf fjfffjfjf jjfj", ""], 
+  "lesson": 1,
+  "wpm": [0,0,0,0,0,0,0,0,0,0],
+  "accuracy": [0,0,0,0,0,0,0,0,0,0]
+}

@@ -1,0 +1,45 @@
+button {
+    margin-top: 5px;
+    height: 40px;
+}
+
+.letterkey  {
+    width: 40px;
+}
+
+.tab {
+    width: 52px;
+}
+
+.backslash {
+    width: 58px;
+}
+
+.capslock {
+    width: 63px;
+}
+
+.enterkey {
+    width: 92px;
+}
+
+.leftshift {
+    width: 85px;
+}
+
+.rightshift {
+    width: 115px;
+}
+
+.spacebar {
+    width:  250px;
+    height: 38px;
+}
+
+#back {
+    width: 75px;
+}
+
+.textbutton {
+    font-size: 10px;
+}
