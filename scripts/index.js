@@ -1,4 +1,4 @@
-const path = require('path')
+// const path = require('path')
 
 var userInfo = {
     "name": 1,
@@ -6,7 +6,7 @@ var userInfo = {
     "accuracy": 0,
     "time": 0,
     "lessons": [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
-  }
+  };
 
 
 function storeLocalInfo(level) {
