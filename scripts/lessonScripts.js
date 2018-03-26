@@ -392,13 +392,6 @@ function goToNextLesson() {
     level = localStorage.getItem("level");
 
 
-    //console.log(process.cwd())
-
-    /*var fs = require('fs');
-    var filename = "userInfo.json";
-    userInfo = JSON.parse(fs.readFileSync(filename));*/
-
-
 
     for (var i = 1; i <= 20; i++) {
 
@@ -478,12 +471,6 @@ function loadLesson(lesson, part) {
         reset();
     }
 
-
-    // Read from the lesson file
-    //var fs = require('fs');
-    //var filename = "lessons/lesson" + lesson + ".json";
-    //currentLesson = JSON.parse(fs.readFileSync(filename));
-
     var filename = "lesson" + lesson;
 
     currentLesson = eval(filename);
@@ -514,14 +501,8 @@ function loadLesson(lesson, part) {
     document.getElementById("part" + part).style.backgroundColor = "#ff751a";
 
     // Make sure the progress bar is now visible
-    // TODO: this does not need to happen every time
     document.getElementById("lessonProgress").style.visibility = "visible";
 
-    /**********************
-     * Repeated code. Store in a function later
-     *********************/
-    filename = "userInfo.json";
-    userInfo = JSON.parse(fs.readFileSync(filename));
 
     // Show which lessons are done
     for (var i = 1; i <= 20; i++) {
@@ -688,21 +669,7 @@ document.addEventListener('keydown', function(event) {
 
         $("#myModal").modal({show: true});  
 
-
-        var filename = "lessons/lesson" + lessonNumber + ".json";
-
-        // Write the Info back to the file
-        // TODO: This is not the most efficent way
-        // Also, raising some flag
-        var fs = require('fs');
-        var data = JSON.stringify(currentLesson, null, 2);
-        fs.writeFile(filename, data);
     
-
-        // Record the user's progress
-        // Read from the userInfo file
-        filename = "userInfo.json";
-        userInfo = JSON.parse(fs.readFileSync(filename));
 
         var updateLessons = true;
 
@@ -729,9 +696,6 @@ document.addEventListener('keydown', function(event) {
         else 
             userInfo.wpm = Math.floor(currentLesson.wpm[lessonPart]);
 
-        // Write to the userInfo file
-        var data = JSON.stringify(userInfo, null, 2);
-        fs.writeFile(filename, data);
     }
 }
 
