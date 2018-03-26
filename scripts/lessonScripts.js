@@ -373,66 +373,12 @@ function updateTimer() {
         else 
             timeStamp = Math.floor(seconds / 60) + ":" + (seconds % 60);
 
-        // document.getElementById("timer").innerHTML = timeStamp;
-
         if(start == true)
             seconds++;
     }
 }
 
 
-/**********************************************************
-* When a link to the lessons is pressed in from the homepage
-* start the correct lesson.
-***********************************************************/
-function goToNextLesson() {
-
-    // Find out which part and which lesson number
-    // to start based of the level they want to practice
-    //level = localStorage.getItem("level");
-
-    console.log(level);
-
-
-    for (var i = 1; i <= 20; i++) {
-
-        document.getElementById("lesson" + i).style.backgroundColor = ""; // Set to grey
-
-        // TODO - Change everything to be index based
-        if (userInfo.lessons[i - 1] == true) 
-            document.getElementById("lesson" + i).style.backgroundColor = "#28a745";
-    }
-
-    if (level > -1) {
-        for(var i = 0; i < 10 ; i++)
-            if(userInfo.lessons[i + (10 * level)] == false) {
-                lessonNumber = i + (10 * level) + 1;
-                break;
-            }
-
-        // Find the first uncompleted part of the lesson
-        //filename = "lesson" + lessonNumber + ".json";
-        //var temporaryLesson = JSON.parse(fs.readFileSync(filename));
-        var filename = "lesson" + lessonNumber;
-        
-        var temporaryLesson = eval(filename);
-
-        console.log(temporaryLesson);
-
-        // Call load lesson with the correct info now
-
-        for (var i = 0; i < 10; i++)
-            if (temporaryLesson.wpm[i] == 0) {
-                lessonPart = i;
-                break
-            }
-
-        localStorage.setItem("level", -1)
-
-        loadLesson(lessonNumber, lessonPart);
-    }
-
-}
 
 /**********************************************************
 * 
@@ -445,7 +391,6 @@ function loadLesson(lesson, part) {
         lesson++
     }
 
-    // TODO - This is bad
     // This is not what I want to happen, just for the record
     if (lesson == 21) {
         lesson = 1;
@@ -465,6 +410,8 @@ function loadLesson(lesson, part) {
 
         tmp1 = document.getElementById(someLetter).className;
         document.getElementById(someLetter).className = tmp1.replace("active", "disabled");
+
+        console.log(someLetter);
     }
 
     //If another lesson has been started, reset
@@ -560,16 +507,39 @@ function loadLesson(lesson, part) {
 function changeKeys(forward) {
 
     // TODO: Can still make this better...
-    if (forward) {var letterToChange = currentLetter - 1;}
-    else         {var letterToChange = currentLetter + 1;}
+    var letterIndex;
 
-    var someLetter = letters[currentLetter].toLowerCase();
+    if (forward) {
+        //letterIndex = currentLetter - 1;
 
-    var tmp1 = document.getElementById(someLetter).className;
-    document.getElementById(someLetter).className = tmp1.replace("active", "disabled");
+        //Deactivate the last letter
+        var someLetter = letters[currentLetter - 1].toLowerCase();
+        var tmp1 = document.getElementById(someLetter).className;
+        document.getElementById(someLetter).className = tmp1.replace("active", "disabled");
 
-    var tmp2 = document.getElementById(someLetter).className;
-    document.getElementById(someLetter).className = tmp2.replace("disabled", "active");
+        // Activate the current letter
+        var someLetter2 = letters[currentLetter].toLowerCase();
+        var tmp2 = document.getElementById(someLetter2).className;
+        document.getElementById(someLetter2).className = tmp2.replace("disabled", "active");
+
+
+    }
+    else {
+        //letterIndex = currentLetter + 1;
+    
+    
+        // Deactivate the current letter
+        var someLetter = letters[currentLetter].toLowerCase();
+        var tmp1 = document.getElementById(someLetter).className;
+        document.getElementById(someLetter).className = tmp1.replace("active", "disabled");
+
+        //Activate the previous letter if currentLetter is greater than 0
+        if(currentLetter > 0) {
+            var someLetter2 = letters[currentLetter - 1].toLowerCase();
+            var tmp2 = document.getElementById(someLetter2).className;
+            document.getElementById(someLetter2).className = tmp2.replace("disabled", "active");
+        }
+    }
 }
 
 /**********************************************************
@@ -611,7 +581,7 @@ function moveForward(isCorrect) {
 document.addEventListener('keydown', function(event) {
 
     // Disable the enter key and tab keys
-    if (event.keyCode == 9 || event.keyCode == 11 || event.keyCode == 13)
+    if (event.keyCode == 9 || event.keyCode == 11 || event.keyCode == 13 || event.keyCode == 8)
         event.preventDefault();
 
     //console.log(event.keyCode);
@@ -640,9 +610,10 @@ document.addEventListener('keydown', function(event) {
             if (spans[currentLetter - 1].id == "correct") 
                 correctLetters--;
             
-            currentLetter--;
 
             changeKeys(false);
+            currentLetter--;
+
 
             spans[currentLetter].id = "current";
             spans[currentLetter].style.backgroundColor = "#66a3ff";     // Set to blue
