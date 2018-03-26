@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Lessons</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Load this stylesheet before other stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  
+  <!-- Other Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="styles/w3.css"> 
+  <link rel="stylesheet" type="text/css" href="styles/keyboardStyle.css">
+  <link rel="stylesheet" type="text/css" href="styles/lessonStyle.css">
+  
+  <!-- Various Script files -->
+  <!-- <script src="scripts/keyboardScript.js"></script> -->
+  <script src="scripts/lessonScripts.js"></script>
+</head>
+
+<body onload="goToNextLesson()">
+
+    <div class="container">
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item" >
+            <a class="nav-link" data-toggle"tab" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle"tab" href="lessonModual.html">Lessons</a>
+          </li>
+        </ul>
+      </div>
+
+<br>
+
+    <!-- Left Sidebar -->
+    <div class="w3-sidebar w3-light-grey w3-bar-block  w3-card" style="width:20%">
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#beginner">Beginner</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#advanced">Advanced</a>
+            </li>
+        </ul> 
+
+        <div class="tab-content"> <br>
+            <div id="beginner" class="container tab-pane active"> 
+                <a href="#" id="lesson1" class="w3-bar-item w3-button" onclick="loadLesson(1, 0)" data-toggle="modal" data-target="#tipModal">J, F, and Space</a>
+                <a href="#" id="lesson2" class="w3-bar-item w3-button" onclick="loadLesson(2, 0)" data-toggle="modal" data-target="#tipModal">U, R, and K</a>
+                <a href="#" id="lesson3" class="w3-bar-item w3-button" onclick="loadLesson(3, 0)" data-toggle="modal" data-target="#tipModal">D, E, and I</a>
+                <a href="#" id="lesson4" class="w3-bar-item w3-button" onclick="loadLesson(4, 0)" data-toggle="modal" data-target="#tipModal">C, G, and N</a>
+                <a href="#" id="lesson5" class="w3-bar-item w3-button" onclick="loadLesson(5, 0)" data-toggle="modal" data-target="#tipModal">T, S, and L</a>
+                <a href="#" id="lesson6" class="w3-bar-item w3-button" onclick="loadLesson(6, 0)" data-toggle="modal" data-target="#tipModal">O, B, and A</a>
+                <a href="#" id="lesson7" class="w3-bar-item w3-button" onclick="loadLesson(7, 0)" data-toggle="modal" data-target="#tipModal">V, H, and M</a>
+                <a href="#" id="lesson8" class="w3-bar-item w3-button" onclick="loadLesson(8, 0)" data-toggle="modal" data-target="#tipModal">Period and Comma</a>
+                <a href="#" id="lesson9" class="w3-bar-item w3-button" onclick="loadLesson(9, 0)" data-toggle="modal" data-target="#tipModal">W, X, and ;</a>
+                <a href="#" id="lesson10" class="w3-bar-item w3-button" onclick="loadLesson(10, 0)" data-toggle="modal" data-target="#tipModal">Q, Y, Z, and P</a>
+            </div>
+
+
+            <div id="advanced" class="container tab-pane fade"> 
+                <a href="#" id="lesson11" class="w3-bar-item w3-button" onclick="loadLesson(11, 0)" data-toggle="modal" data-target="#tipModal">Common English Words</a>
+                <a href="#" id="lesson12" class="w3-bar-item w3-button" onclick="loadLesson(12, 0)" data-toggle="modal" data-target="#tipModal">Easy Home Row Words</a>
+                <a href="#" id="lesson13" class="w3-bar-item w3-button" onclick="loadLesson(13, 0)" data-toggle="modal" data-target="#tipModal">Easy Top Row Words</a>
+                <a href="#" id="lesson14" class="w3-bar-item w3-button" onclick="loadLesson(14, 0)" data-toggle="modal" data-target="#tipModal">Easy Bottom Row Words</a>
+                <a href="#" id="lesson15" class="w3-bar-item w3-button" onclick="loadLesson(15, 0)" data-toggle="modal" data-target="#tipModal">Shift Key and Capitalization</a>
+                <a href="#" id="lesson16" class="w3-bar-item w3-button" onclick="loadLesson(16, 0)" data-toggle="modal" data-target="#tipModal">Sentences</a>
+                <a href="#" id="lesson17" class="w3-bar-item w3-button" onclick="loadLesson(17, 0)" data-toggle="modal" data-target="#tipModal">Sentences continued</a>
+                <a href="#" id="lesson18" class="w3-bar-item w3-button" onclick="loadLesson(18, 0)" data-toggle="modal" data-target="#tipModal">Basic Punctuation</a>
+                <a href="#" id="lesson19" class="w3-bar-item w3-button" onclick="loadLesson(19, 0)" data-toggle="modal" data-target="#tipModal">Paragraphs</a>
+                <a href="#" id="lesson20" class="w3-bar-item w3-button" onclick="loadLesson(20, 0)" data-toggle="modal" data-target="#tipModal">Skill Builder Drills</a>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="w3-sidebar w3-light-grey w3-bar-block w3-card" style="width:20%;right:0;">
+        <h3 class="w3-bar-item">Tip</h3>
+        <div id="tip"></div>
+    </div>
+    
+    <!-- Various page Controls -->
+    <!-- TODO: Make this smaller and fix the controlls -->
+    <div class="container" id="pageControls" align="center" style="height: 75px">
+        <div class="row" align="center">
+            <!-- <div class="col" id="timer" >0:00</div> -->
+            <button type="button" class="btn btn-outline-secondary col" id="reset" onclick="reset()">
+                Reset
+            </button> <!--  -->
+        </div>
+    </div>
+
+    <!-- Lesson Input -->
+    <div class="jumbotron container" align="center" id="lessonInput">
+        <div class="row" id="row0" align="center">
+            Select the lesson you would like to start
+        </div>
+    </div>
+
+    <!-- Keyboard -->
+    <div id="keyboard" class="container" align="center">
+            <button id="`" type="button" class="btn btn-success disabled">`</button>
+            <button id="1" type="button" class="letterkey btn btn-success disabled">1</button>
+            <button id="2" type="button" class="letterkey btn btn-success disabled">2</button>
+            <button id="3" type="button" class="letterkey btn btn-success disabled">3</button>
+            <button id="4" type="button" class="letterkey btn btn-success disabled">4</button>
+            <button id="5" type="button" class="letterkey btn btn-success disabled">5</button>
+            <button id="6" type="button" class="letterkey btn btn-success disabled">6</button>
+            <button id="7" type="button" class="letterkey btn btn-success disabled">7</button>
+            <button id="8" type="button" class="letterkey btn btn-success disabled">8</button>
+            <button id="9" type="button" class="letterkey btn btn-success disabled">9</button>
+            <button id="0" type="button" class="letterkey btn btn-success disabled">0</button>
+            <button id="-" type="button" class="letterkey btn btn-success disabled">-</button>
+            <button id="="    type="button" class="letterkey btn btn-success disabled">=</button>
+            <button id="back" type="button" class="backspace textbutton btn btn-success disabled">backspace</button>
+            <br>
+        
+            <button id="tab"  type="button" class="tab textbutton btn btn-success disabled">tab</button>
+            <button id="q" type="button" class="letterkey btn btn-success disabled">q</button>
+            <button id="w" type="button" class="letterkey btn btn-success disabled">w</button>
+            <button id="e" type="button" class="letterkey btn btn-success disabled">e</button>
+            <button id="r" type="button" class="letterkey btn btn-success disabled">r</button>
+            <button id="t" type="button" class="letterkey btn btn-success disabled">t</button>
+            <button id="y" type="button" class="letterkey btn btn-success disabled">y</button>
+            <button id="u" type="button" class="letterkey btn btn-success disabled">u</button>
+            <button id="i" type="button" class="letterkey btn btn-success disabled">i</button>
+            <button id="o" type="button" class="letterkey btn btn-success disabled">o</button>
+            <button id="p" type="button" class="letterkey btn btn-success disabled">p</button>
+            <button id="[" type="button" class="letterkey btn btn-success disabled">[</button>
+            <button id="]" type="button" class="letterkey btn btn-success disabled">]</button>
+            <button id="\" type="button" class="backslash btn btn-success disabled">\</button>
+            <br>
+        
+            <button id="caps" type="button" class="capslock textbutton btn btn-success disabled">caps lock</button>
+            <button id="a" type="button" class="letterkey btn btn-success disabled">a</button>
+            <button id="s" type="button" class="letterkey btn btn-success disabled">s</button>
+            <button id="d" type="button" class="letterkey btn btn-success disabled">d</button>
+            <button id="f" type="button" class="letterkey btn btn-success disabled">f</button>
+            <button id="g" type="button" class="letterkey btn btn-success disabled">g</button>
+            <button id="h" type="button" class="letterkey btn btn-success disabled">h</button>
+            <button id="j" type="button" class="letterkey btn btn-success disabled">j</button>
+            <button id="k" type="button" class="letterkey btn btn-success disabled">k</button>
+            <button id="l" type="button" class="letterkey btn btn-success disabled">l</button>
+            <button id=";" type="button" class="letterkey btn btn-success disabled">;</button>      
+            <button id="'" type="button" class="letterkey btn btn-success disabled">'</button>
+            <button id="enter" type="button" class="enterkey textbutton btn btn-success disabled">enter</button>
+            <br>
+        
+            <button id="shift" type="button" class="leftshift textbutton btn btn-success disabled">shift</button>
+            <button id="z" type="button" class="letterkey btn btn-success disabled">z</button>
+            <button id="x" type="button" class="letterkey btn btn-success disabled">x</button>
+            <button id="c" type="button" class="letterkey btn btn-success disabled">c</button>
+            <button id="v" type="button" class="letterkey btn btn-success disabled">v</button>
+            <button id="b" type="button" class="letterkey btn btn-success disabled">b</button>
+            <button id="n" type="button" class="letterkey btn btn-success disabled">n</button>
+            <button id="m" type="button" class="letterkey btn btn-success disabled">m</button>
+            <button id="," type="button" class="letterkey btn btn-success disabled">,</button>
+            <button id="." type="button" class="letterkey btn btn-success disabled">.</button>
+            <button id="/" type="button" class="letterkey btn btn-success disabled">/</button>      
+            <button id="shift"  type="button" class="rightshift textbutton btn btn-success disabled">shift</button>
+            <br>
+        
+            <button id="ctrl" type="button" class="letterkey textbutton btn btn-success disabled">ctrl</button>
+            <button         type="button" class="letterkey textbutton btn btn-success disabled">fn</button>
+            <button id="win" type="button" class="letterkey textbutton btn btn-success disabled">win</button>
+            <button id="alt" type="button" class="letterkey textbutton btn btn-success disabled">alt</button>
+            <button id=" " type="button" class="spacebar btn btn-success disabled"></button>
+            <button id="alt" type="button" class="letterkey textbutton btn btn-success disabled">alt</button>
+            <button id="ctrl" type="button" class="letterkey textbutton btn btn-success disabled">ctrl</button>
+            <button         type="button" class="letterkey btn btn-success disabled"></button>
+            <button         type="button" class="letterkey btn btn-success disabled"></button>
+            <button         type="button" class="letterkey btn btn-success disabled"></button>
+    </div>
+
+    <!-- Progress bar -->
+    <div id="lessonProgress" class="container" align="center" style="width:50%; visibility:hidden">
+        <br>
+        <p align="left">Lesson Progress</p>
+        <div class="progress">
+            <div id="part0" style="width:10%" onclick="loadLesson(lessonNumber, 0)">1</div>
+            <div id="part1" style="width:10%" onclick="loadLesson(lessonNumber, 1)">2</div>
+            <div id="part2" style="width:10%" onclick="loadLesson(lessonNumber, 2)">3</div>
+            <div id="part3" style="width:10%" onclick="loadLesson(lessonNumber, 3)">4</div>
+            <div id="part4" style="width:10%" onclick="loadLesson(lessonNumber, 4)">5</div>
+            <div id="part5" style="width:10%" onclick="loadLesson(lessonNumber, 5)">6</div>
+            <div id="part6" style="width:10%" onclick="loadLesson(lessonNumber, 6)">7</div>
+            <div id="part7" style="width:10%" onclick="loadLesson(lessonNumber, 7)">8</div>
+            <div id="part8" style="width:10%" onclick="loadLesson(lessonNumber, 8)">9</div>
+            <div id="part9" style="width:10%" onclick="loadLesson(lessonNumber, 9)">10</div>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+      
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Great Job!</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+      
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col">
+                        <div class="row">WPM:</div>
+                        <div id="wpm" class="row"></div>
+                    </div>
+                    <div class="col">
+                        <div class="row">Accuracy:</div>
+                        <div id="accuracy" class="row"></div>
+                    </div>
+                    <div class="col">
+                        <div class="row">Time:</div>
+                        <div id="time" class="row"></div>
+                    </div>
+                </div>
+            </div>
+      
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="loadLesson(lessonNumber, lessonPart + 1)">Next Part</button>
+            </div>
+      
+          </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+
+</body>
+</html>
