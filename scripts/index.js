@@ -17,8 +17,6 @@ function storeLocalInfo(level) {
         // Fetch the data
         console.log(localStorage.getItem("level"));
     }
-
-
 }
 
 
