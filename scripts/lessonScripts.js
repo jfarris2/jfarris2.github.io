@@ -389,8 +389,9 @@ function goToNextLesson() {
 
     // Find out which part and which lesson number
     // to start based of the level they want to practice
-    level = localStorage.getItem("level");
+    //level = localStorage.getItem("level");
 
+    console.log(level);
 
 
     for (var i = 1; i <= 20; i++) {
