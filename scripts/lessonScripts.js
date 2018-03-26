@@ -480,9 +480,13 @@ function loadLesson(lesson, part) {
 
 
     // Read from the lesson file
-    var fs = require('fs');
-    var filename = "lessons/lesson" + lesson + ".json";
-    currentLesson = JSON.parse(fs.readFileSync(filename));
+    //var fs = require('fs');
+    //var filename = "lessons/lesson" + lesson + ".json";
+    //currentLesson = JSON.parse(fs.readFileSync(filename));
+
+    var filename = "lesson" + lesson;
+
+    currentLesson = eval(filename);
 
     // Loop through the lesson and split it into multiple divs.
     // Send the divs to the document
