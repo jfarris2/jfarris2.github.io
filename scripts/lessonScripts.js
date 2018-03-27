@@ -280,7 +280,7 @@ var lesson18 = { "lesson": 18
     , "wpm": [0,0,0,0,0,0,0,0,0,0]
     , "accuracy": [0,0,0,0,0,0,0,0,0,0]};
 var lesson19 = { "lesson": 19
-    , "0": ["Tracy looked at the flag. The flag is ||red, white,and blue. It has fifty ||white stars, seven red stripes, and ||six white stripes.", ""]
+    , "0": ["Tracy looked at the flag. The flag is ||red, white, and blue. It has fifty ||white stars, seven red stripes, and ||six white stripes.", ""]
     , "1": ["Donald plays the piano. He loves the ||piano. He has a big piano in his ||living room. His piano is shiny ||and black.", ""]
     , "2": ["This weekend I went to the zoo. It was ||great. I went with my mom and dad. ||My sister came, too. The zoo was in ||the city. The drive was very long.", ""]
     , "3": ["When I was playing today at recess, I ||felt like a kite blown around by the ||wind. It was hard to stay in one ||place because the wind was so strong.", ""]
@@ -311,7 +311,7 @@ var lesson20 = { "lesson": 20
 
 
 /************************************
- * 
+ * Set the current lesson to orange
  *************************************/
 function highlightLesson(lesson) {
 
@@ -361,6 +361,8 @@ function reset() {
 
 /**********************************************************
  * That's pretty self explanitory...
+ * I took this out of the final submission, but it would be 
+ * simple to re-add.
  *********************************************************/
 function updateTimer() {
 
@@ -381,7 +383,7 @@ function updateTimer() {
 
 
 /**********************************************************
-* 
+* Get the selected lesson ready to start
 ***********************************************************/
 function loadLesson(lesson, part) {
 
@@ -502,11 +504,12 @@ function loadLesson(lesson, part) {
 }
 
 /**********************************************************
- * 
+ * Change which keys are highlighted on the keyboard.
+ * There are more effectient ways of doing this. I coded
+ * it to be easily understood.
  *********************************************************/
 function changeKeys(forward) {
 
-    // TODO: Can still make this better...
     var letterIndex;
 
     if (forward) {
@@ -525,8 +528,6 @@ function changeKeys(forward) {
 
     }
     else {
-        //letterIndex = currentLetter + 1;
-    
     
         // Deactivate the current letter
         var someLetter = letters[currentLetter].toLowerCase();
@@ -576,7 +577,7 @@ function moveForward(isCorrect) {
 
 
 /**********************************************************
- * 
+ * Handle key strokes appropriatly
  *********************************************************/
 document.addEventListener('keydown', function(event) {
 
