@@ -56,7 +56,7 @@ var lesson2 = {
     "4": ["jjjk fffr jjkk ffrr rrff kkj rrrf k ||jk fr jkk frr kj rf frjk frjk kjrf", "Curious what WPM means? WPM stands for Words Per Minute!"], 
     "5": ["kuf ruk kur ruf fur kurf kur ruk ku ||kku ffr ufk kruf furr rukk ffr ufk", ""], 
     "6": ["ruff furr ruff furr kruff furr ruff ||fur ruff kruff furr ruff fur ruf kr", ""], 
-    "7": ["urkj jruk kurj jjkk urrkk jrku kurj || kkrr uujj jurk kurj kurk jurj jurk", ""], 
+    "7": ["urkj jruk kurj jjkk urrkk jrku kurj ||kkrr uujj jurk kurj kurk jurj jurk", ""], 
     "8": ["rufkj jufr kjufrk jrkujk fjkur jufr ||fjkurk furfurfu krufkrfu furfurfu", ""], 
     "9": ["kurr kurrf kufr jjuu jjrr kfur jjuu ||kkjjuurrff furjkk uujjrrffkk jjufrk", ""], 
     "lesson": 2,
@@ -95,7 +95,7 @@ var lesson4 = { "lesson": 4
     , "accuracy": [0,0,0,0,0,0,0,0,0,0]};
 var lesson5 = { "lesson": 5
     , "0": ["f ttt f ttt f ttt f ttt f ttt f ttt ||ftt ftt ftt ftt ftt ftt ftf ftf ||ftt ftt ftt ftt ftt ftt tft tft tft", "Type the T key by reaching your index finger up from the F key. If this feels like a long stretch, you may need to elevate your wrists/palms off the keyboard. Keeping your wrists up is an important ergonomic technique, helping with both speed and injury prevention!"]
-    , "1": ["k lll k lll k lll k lll k lll k lll ||kll kll kll kll kll kll klk klk klk || kll kll kll kll kll kll lkl lkl lkl", "Time for a new finger! The L key is typed with the ring finger on your right hand."]
+    , "1": ["k lll k lll k lll k lll k lll k lll ||kll kll kll kll kll kll klk klk klk ||kll kll kll kll kll kll lkl lkl lkl", "Time for a new finger! The L key is typed with the ring finger on your right hand."]
     , "2": ["f ttt f ttt ftt ftt ftf ftftft tft ||k lll k lll kll kll klk klk lkl lkl ||ft kl ft kl ft kl ft kl ltl tlt tlt", ""]
     , "3": ["d sss d sss d sss d sss d sss d sss ||dsss dss dss dss dss dss dsd dsd dsd ||dss dss dss dss dss dss sds sds sds", ""]
     , "4": ["es et is it li si st te ti us ||ut lie lis lit sei sel set sit ||sue sui tel tes tie til ties tui", ""]
@@ -116,7 +116,7 @@ var lesson6 = { "lesson": 6
     , "6": ["oat sal sat sol sot tao tas ||also alto alts last lats lost", ""]
     , "7": ["blast bolts sabot altos loast ||tolas salto loast botas boat", ""]
     , "8": ["boast boaked debark bakers ||laked raiked skated skitted", ""]
-    , "9": ["abides adobes bailed bard ||coned conga dance design || dingo genic incog ocean ||beading decagon coinage", ""]
+    , "9": ["abides adobes bailed bard ||coned conga dance design ||dingo genic incog ocean ||beading decagon coinage", ""]
     , "wpm": [0,0,0,0,0,0,0,0,0,0]
     , "accuracy": [0,0,0,0,0,0,0,0,0,0]};
 var lesson7 = { "lesson": 7
@@ -127,7 +127,7 @@ var lesson7 = { "lesson": 7
     , "4": ["jm jh jm jh jmjh jmjh hjm hjm mjh mjh ||hhh jjj mmm jjj hhh jjj mmm m h j m", ""]
     , "5": ["vhm vhm mvh mvh hmv hmv ||mmh mmv mmh mmv mmh mmv ||vvh vvm hhv mmh vhm vmv", "While typing, try using quick strokes. Hit the keys and bounce off. Don't hold down or smash the keys. Just stroke, and bounce your finger back up."]
     , "6": ["ab ah am ba bo ha hm ma mo ||oh om avo bah bam boa ham ||hao hob mho moa moba moha", ""]
-    , "7": ["hams hang hant hats hobs hogs || holt host mobs most moth mogs ||oval vang vans vast vats volt", ""]
+    , "7": ["hams hang hant hats hobs hogs ||holt host mobs most moth mogs ||oval vang vans vast vats volt", ""]
     , "8": ["moth mogs oval vang vans vast vats ||hacks halos halfts haulm havoc hacks ||formal fourth frocks frugal fulgor ||turban rubos tuscan umbtsl unv volt", ""]
     , "9": ["haol hacks formal ovals halo hacks ||halo hacks formal ovals halo hacks", ""]
     , "wpm": [0,0,0,0,0,0,0,0,0,0]
@@ -149,7 +149,7 @@ var lesson9 = { "lesson": 9
     , "0": ["s www s www s www s www s www s www ||sww sww sww sww sww sww sww sws sws ||wws wws wws wws wws wws wws wsw wsw", "Type the W key with your left hand's ring finger. Don't forget to bring it back to the S key!"]
     , "1": ["l ;;; l ;;; l ;;;; l ;;; l ;;; l ;;; ||l;; l;; l;; l;; l;; l;; l;; l;l l;l ||;;l ;;l ;;l ;;l ;;l ;;l ;;l ;l; ;l;", "Now for the final finger, type the ; (semicolon) key with your right hand's pinky. After this screen, you will have used all 10 fingers!"]
     , "2": ["sww l;;; sww l;; s www s www l ;;; l ;; ||wss ;ll wss ;ll wsw wsw ;l; ;l; sws sws", ""]
-    , "3": ["s xxx s xxx s xxx s xxx s xxx s xxx ||sxx sxx sxx sxx sxx sxx sxx sxs sxs || xxs xxs xxs xxs xxs xxs xxs xsx xsx", "Type the X key by bringing your left hand's ring finger down, and then returning to the S key."]
+    , "3": ["s xxx s xxx s xxx s xxx s xxx s xxx ||sxx sxx sxx sxx sxx sxx sxx sxs sxs ||xxs xxs xxs xxs xxs xxs xxs xsx xsx", "Type the X key by bringing your left hand's ring finger down, and then returning to the S key."]
     , "4": ["sxs sws sxs sws wsx wsx xsw xsw ||xxxx wwww xx ww sw sx sw sx wxw", ""]
     , "5": ["www xxx ;;; wx; ;xw wwx ww; sx sw l; ;l ||;w ;x ;;w ;;x x;x s;s w;w wxw xwx ww;", ""]
     , "6": ["hex how; ho; maw maxx; mew; owe vaw;", ""]
@@ -205,7 +205,7 @@ var lesson13 = { "lesson": 13
     , "0": ["add all alley aft agh ask afford ajar ||ate art app arty awe aww apt arr aught ||abs acct among aztec ant am avenue", ""]
     , "1": ["salad slap slide shell sad sat shall ||super sure sip sod side sewer sell sap ||sam sack salmon sniper snack snoop", ""]
     , "2": ["dad dan decide dag darpa dart defer ||dip destiny dread dew do dipity dud ||dax dimmer dinner dav dam dax dent doom", ""]
-    , "3": ["fan flirt fact flute flapper || fill fed fun few fewer fist fern ||fanatic fancy fab fennel fervor", ""]
+    , "3": ["fan flirt fact flute flapper ||fill fed fun few fewer fist fern ||fanatic fancy fab fennel fervor", ""]
     , "4": ["gandalf garden gas gad gallant gap ||great goo good gin guard garden green ||gamma gammy gym gabby gib gone gaven", ""]
     , "5": ["has hat half haha ham halpert handy ||helmet hep hurting hip heart hem hurt ||hand hammy hen hummer hunger hack hax", ""]
     , "6": ["jason jam jan jail jandy jag jandy ||jest jen jill john joyous jimmy joomla ||jam jabber jamming jax javvy jammers", ""]
@@ -219,9 +219,9 @@ var lesson14 = { "lesson": 14
     , "1": ["wonder were wet weapon weeds window ||wheat when where whack wander waft wall ||want waver wacky wax wave went worn", ""]
     , "2": ["eerie eep eight eyes eel ewe eeple ||egg elk eagle ear earth eleven earn ||evil evangelical even evan extra", ""]
     , "3": ["rose ring robot record report ruse re ||rabbit rain rainbow rake rat rhino ||ram rave recede rummy razzle rabbit", ""]
-    , "4": ["tent tiger toe toilet toad tooth toil ||taxi table tasty tally tattle tail || tan tammy tax taxed tacky tabby", ""]
+    , "4": ["tent tiger toe toilet toad tooth toil ||taxi table tasty tally tattle tail ||tan tammy tax taxed tacky tabby", ""]
     , "5": ["yell yolk yogurt yoyo yelling yippy ||yacht yarn yawn yak yam yag yaffer ||yaz yax yabby yuma young yummy yamax", ""]
-    , "6": ["up upside ur uppity upperson underwhelm || usa unicycle understand upstairs ||umbrella unicorn unhappy uniform uni", ""]
+    , "6": ["up upside ur uppity upperson underwhelm ||usa unicycle understand upstairs ||umbrella unicorn unhappy uniform uni", ""]
     , "7": ["iris irate import idaho iconic icon ||iquana igloo idea island indigo ilene ||ice ivy icicle inside important intuit", ""]
     , "8": ["orange owl orly ornate orchard ore ||oar odd off offer offering oatmeal ||ox one oboe oval onto ovate only ox", ""]
     , "9": ["portly pin pure pods privy pencil pig ||paint pants pal pail plane plain pan ||pam pizza pizzas pavel", ""]
@@ -417,7 +417,7 @@ function loadLesson(lesson, part) {
     }
 
     //If another lesson has been started, reset
-    if(start == true || lessonEnd == true) {
+    if(start == true ||lessonEnd == true) {
         reset();
     }
 
@@ -582,7 +582,7 @@ function moveForward(isCorrect) {
 document.addEventListener('keydown', function(event) {
 
     // Disable the enter key and tab keys
-    if (event.keyCode == 9 || event.keyCode == 11 || event.keyCode == 13 || event.keyCode == 8)
+    if (event.keyCode == 9 ||event.keyCode == 11 ||event.keyCode == 13 ||event.keyCode == 8)
         event.preventDefault();
 
     //console.log(event.keyCode);
@@ -600,7 +600,7 @@ document.addEventListener('keydown', function(event) {
         if (letters[currentLetter] == event.key) {
             moveForward(true); // Correct Key was pressed
         } 
-        else if ( ((32 <= event.keyCode && event.keyCode < 127) || event.keyCode == 186) && start == true) {
+        else if ( ((32 <= event.keyCode && event.keyCode < 127) ||event.keyCode == 186) && start == true) {
             moveForward(false); // Incorrect Key was pressed
         } 
         else if (event.keyCode == 8 && currentLetter > 0) {
